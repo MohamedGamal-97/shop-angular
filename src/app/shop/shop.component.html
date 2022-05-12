@@ -95,7 +95,9 @@
             <div class="row">
                 <div class="col-md-4 mb-4" *ngFor="let item of products">
                 <!-- <div *ngIf="sortSelected === 'priceDesc' && item.price >= 200"> -->
-                   <app-product-item [product]="item"></app-product-item> 
+                    <!-- <div *ngIf="item.price >= 190"> -->
+                   <app-product-item  [product]="item"></app-product-item> 
+                <!-- </div> -->
                 <!-- </div> -->
                 </div>
             </div>
