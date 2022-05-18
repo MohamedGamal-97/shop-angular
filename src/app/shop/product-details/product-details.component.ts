@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BasketService } from 'src/app/basket/basket.service';
 import { IProduct } from 'src/app/shared/models/product';
 import { ShopParams } from 'src/app/shared/models/shopParams';
 import { BreadcrumbService } from 'xng-breadcrumb';
@@ -17,7 +18,8 @@ export class ProductDetailsComponent implements OnInit {
   shopParams: ShopParams;
 
   quantity = 1;
-  constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute,private bcService:BreadcrumbService) {
+  constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute,private bcService:BreadcrumbService
+    ,private basketService:BasketService) {
      this.shopParams=new ShopParams();
      this.SameSubCategory=[];
      this.bcService.set("@ProductDetails",'')
@@ -64,15 +66,20 @@ export class ProductDetailsComponent implements OnInit {
 
   // }
 
-  incrementQuantity() {
+
+  slideConfig = {"slidesToShow": 6, "slidesToScroll": 6,"infinite": false,'dots': true,  'autoplay': true,  'adaptiveHeight': true,'draggable':true,    autoplaySpeed: 4000,} ;
+
+  addItemToBasket(){
+    this.basketService.addItemToBasket(this.product,this.quantity);
+  }
+
+  incrementQuantity(){
     this.quantity++;
   }
 
-  decrementQuantity() {
-    if (this.quantity > 1) {
+  decrementQuantity(){
+    if(this.quantity>1){
       this.quantity--;
     }
   }
-  slideConfig = {"slidesToShow": 6, "slidesToScroll": 6,"infinite": false,'dots': true,  'autoplay': true,  'adaptiveHeight': true,'draggable':true,    autoplaySpeed: 4000,} ;
-
 }

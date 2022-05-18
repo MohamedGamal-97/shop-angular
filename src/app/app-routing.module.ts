@@ -15,6 +15,8 @@ const routes: Routes = [
   {path:'about-us',loadChildren:()=>import('./about-us/about-us.module').then(a=>a.AboutUsModule),data: { breadcrumb: 'About-Us' }},
   {path:'contact-us',loadChildren:()=>import('./contact-us/contact-us.module').then(a=>a.ContactUsModule),data: { breadcrumb: 'Contact-Us' }},
 
+
+  {path:'checkout',loadChildren:()=>import('./checkout/checkout.module').then(m=>m.CheckoutModule)},
   { path: '**', redirectTo: '', pathMatch: 'full' },
 
 ];

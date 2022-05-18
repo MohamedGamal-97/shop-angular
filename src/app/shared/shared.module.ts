@@ -4,10 +4,12 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { PagingHeaderComponent } from './components/paging-header/paging-header.component';
 import { PagerComponent } from './components/pager/pager.component';
 
-import { CarouselModule } from 'ngx-owl-carousel-o';
+// import { CarouselModule } from 'ngx-owl-carousel-o';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import { MessageBoxComponent } from './components/message-box/message-box.component';
+import {CarouselModule} from 'ngx-bootstrap/carousel';
+import { OrderTotalsComponent } from './components/order-totals/order-totals.component';
 
 @NgModule({
   declarations: [
@@ -15,20 +17,23 @@ import { MessageBoxComponent } from './components/message-box/message-box.compon
     PagerComponent,
     DashboardComponent,
     MessageBoxComponent,
+    OrderTotalsComponent
   ],
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
-    CarouselModule,
+    // CarouselModule,
     RouterModule,
 
+    CarouselModule.forRoot()
   ],
   exports:[
     PaginationModule,
     PagingHeaderComponent,
     PagerComponent,
     DashboardComponent,
-    MessageBoxComponent
+    // CarouselModule,
+    OrderTotalsComponent
   ]
 })
 export class SharedModule { }
