@@ -150,7 +150,9 @@
 
             <div class="product-hover-overlay">
               <a href="#"><i class="tf-ion-android-cart"></i></a>
-              <a href="#"><i class="tf-ion-ios-heart"></i></a>
+              <a href="#simpleModal" (click)="addItemToFavourite(product)" data-toggle="modal"  data-backdrop="static"  data-keyboard="false"><i class="tf-ion-ios-heart"></i></a>
+
+              <!-- <a href="#"><i class="tf-ion-ios-heart"></i></a> -->
             </div>
 
             <div class="product-info">
@@ -484,3 +486,30 @@
   </section>
 </div>
 
+<div id="simpleModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Item Added</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">your product added to your favorite list</div>
+      <div class="modal-footer">
+        <a class="btn btn-secondary" data-dismiss="modal">continue shopping</a>
+        <a
+          routerLink="/favourite"
+          class="btn btn-secondary"
+          data-dismiss="modal"
+          >go to favourite list</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

@@ -16,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     SlickCarouselModule,
     RatingModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    SlickCarouselModule
   ],
   providers: [
      RatingConfig],
