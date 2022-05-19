@@ -11,7 +11,7 @@ import { CheckoutRoutingModule } from './checkout-routing.module';
   ],
   imports: [
     CommonModule,
-  CheckoutRoutingModule
+    CheckoutRoutingModule
   ]
 })
 export class CheckoutModule { }

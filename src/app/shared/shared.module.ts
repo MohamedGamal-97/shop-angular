@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { PagingHeaderComponent } from './components/paging-header/paging-header.component';
 import { PagerComponent } from './components/pager/pager.component';
+
+// import { CarouselModule } from 'ngx-owl-carousel-o';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RouterModule } from '@angular/router';
+import { MessageBoxComponent } from './components/message-box/message-box.component';
 import {CarouselModule} from 'ngx-bootstrap/carousel';
 import { OrderTotalsComponent } from './components/order-totals/order-totals.component';
 
@@ -10,18 +15,24 @@ import { OrderTotalsComponent } from './components/order-totals/order-totals.com
   declarations: [
     PagingHeaderComponent,
     PagerComponent,
+    DashboardComponent,
+    MessageBoxComponent,
     OrderTotalsComponent
   ],
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
+    // CarouselModule,
+    RouterModule,
+
     CarouselModule.forRoot()
   ],
   exports:[
     PaginationModule,
     PagingHeaderComponent,
     PagerComponent,
-    CarouselModule,
+    DashboardComponent,
+    // CarouselModule,
     OrderTotalsComponent
   ]
 })
