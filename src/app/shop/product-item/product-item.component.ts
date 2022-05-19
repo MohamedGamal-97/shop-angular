@@ -16,7 +16,6 @@ export class ProductItemComponent implements OnInit {
   ngOnInit(): void {
     // alert((favourite$|async).items);
   }
-x=5;
   addItemToFavourite() {
     this.favouriteService.addItemToFavourite(this.product);
   }

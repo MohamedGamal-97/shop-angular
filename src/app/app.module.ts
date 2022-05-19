@@ -8,9 +8,9 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import {  NgxSpinnerModule } from 'ngx-spinner';
-import { loadingInterceptor } from './core/interceptors/loading.interceptors';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
+// import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
 
 
 

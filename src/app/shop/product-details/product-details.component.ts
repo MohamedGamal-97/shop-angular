@@ -52,7 +52,7 @@ export class ProductDetailsComponent implements OnInit {
     this.shopService.getproduct(id).subscribe(
       product=>{
         this.product=product
-        alert(product.productReviews[0]);
+        // alert(product.productReviews[0]);
         this.bcService.set("@ProductDetails",product.name)
         this.getProductBySubCategory();
 
@@ -72,7 +72,9 @@ export class ProductDetailsComponent implements OnInit {
   addItemToBasket(){
     this.basketService.addItemToBasket(this.product,this.quantity);
   }
-
+OnQuantityChange(event:any){
+alert(event)
+}
   incrementQuantity(){
     this.quantity++;
   }

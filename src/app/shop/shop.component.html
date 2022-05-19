@@ -65,7 +65,6 @@
                   class="form-check-input"
                   type="checkbox"
                   value=""
-                  [(ngModel)]="isChecked"
                   (change)="onBrandSelected(brand.name, $event)"
                   id="brand{{ brand.id }}"
                 />
@@ -89,7 +88,6 @@
                   class="form-check-input"
                   type="checkbox"
                   value=""
-                  [(ngModel)]="isChecked"
                   (change)="onColorSelected(color.name, $event)"
                   id="color{{ color.id }}"
                 />
@@ -113,7 +111,6 @@
                   class="form-check-input"
                   type="checkbox"
                   value=""
-                  [(ngModel)]="isChecked"
                   (change)="onSizeSelected(size.name, $event)"
                   id="Size{{ size.id }}"
                 />
