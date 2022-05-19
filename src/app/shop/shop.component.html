@@ -85,11 +85,20 @@
                 >
             </app-paging-header>
 
-                <div class="form-inline mt-2">
+                <!-- <div class="form-inline mt-2">
                     <input (keyup)="onSearch()" class="form-control mr-2" #search style="width: 300px;" placeholder="Search" type="text">
                     <button (click)="onSearch()" class="btn btn-outline-primary my-2">Search</button>
                     <button (click)="onReset()" class="btn btn-outline-success ml-2 my-2">Reset</button>
+                </div> -->
+                <div class="searchBox form-inline">
+                    <input #search class="searchInput"type="text" name="" placeholder="Search">
+                    <button (click)="onSearch()" class="searchButton">
+                        <i  class="material-icons">
+                            search
+                        </i>
+                    </button>
                 </div>
+        
             </div>
 
             <div class="row">

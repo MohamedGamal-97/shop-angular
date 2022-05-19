@@ -22,10 +22,9 @@
       <div class="card p-3">
           <div class="d-flex justify-content-between align-items-center ">
               <div class="mt-2">
-                  <h4 class="text-uppercase">{{product.productBrand}}</h4>
-                  <div class="mt-5">
+                  <h4 class="text-uppercase" style="font-size:0.7rem;">{{product.productBrand}}</h4>
+                  <div style="margin-top: 4rem;">
                       <h5 class="text-uppercase mb-0">{{product.name}}</h5>
-                      <!-- <h1 class="main-heading mt-0">{{product.name}}</h1> -->
                       <div class="d-flex flex-row user-ratings">
                           <div class="ratings">
                           <i class="fa fa-star"></i>
@@ -38,9 +37,7 @@
                   </div>
               </div>
               <div class="image">
-                  <!-- <img src="https://i.imgur.com/MGorDUi.png" width="200"> -->
-      <img src="{{product.pictureUrl}}" alt="{{product.name}}" class="img-fluid" width="100">
-
+                <img src="{{product.pictureUrl}}" alt="{{product.name}}" class="img-fluid" width="100">
               </div>
           </div>
           
@@ -55,10 +52,31 @@
               
           </div>
           
-          
-          <p>A great option weather you are at office or at home. </p>
-          
-          <button (click)="addItemToBasket()" class="btn btn-danger">Add to cart</button>
+          <button (click)="addItemToBasket()" class="btn" style="color: #fff;background-color: #1f7433;border-color: #28a745;">Add to cart</button>
       </div>  
     
 </div>
+
+
+<!-- <div class="d-flex align-items-center justify-content-center">
+    <div class="py-3" style="width: 100%;">
+        <div class="" style="box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 10px 10px -5px rgb(0 0 0 / 4%); border-radius: 0.5rem;     background-color: #fff;">
+            <div style="background-image: url({{product.pictureUrl}});padding: 1rem;    height: 14rem;background-size: cover;background-position: center;">
+                
+            <div class="d-flex justify-content-end">
+                    <svg style="width: 1.5rem;color: #fff;fill: currentColor;height: 1.5rem; display: block;
+                    vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12.76 3.76a6 6 0 0 1 8.48 8.48l-8.53 8.54a1 1 0 0 1-1.42 0l-8.53-8.54a6 6 0 0 1 8.48-8.48l.76.75.76-.75zm7.07 7.07a4 4 0 1 0-5.66-5.66l-1.46 1.47a1 1 0 0 1-1.42 0L9.83 5.17a4 4 0 1 0-5.66 5.66L12 18.66l7.83-7.83z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div style="padding: 1rem;">
+                <p  style="margin:0; font-weight: 700; font-size: .875rem;text-transform: uppercase;color: #4a5568;">{{product.name}}</p>
+                <p style="font-size: 1.875rem;color: #1a202c;    margin: 0;">{{product.price | currency}}</p>
+                <p style="color: #4a5568; margin:0;">{{product.productBrand}}</p>
+            </div>
+            
+            
+        </div>
+    </div>
+</div> -->
