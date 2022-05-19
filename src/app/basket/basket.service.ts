@@ -70,7 +70,7 @@ basketTotal$ = this.basketTotalSource.asObservable();
       productName: item.name,
       price: item.price,
       quantity,
-      pictureUrl: item.pictureUrl,
+      pictureUrl: item.pictureUrl[0],
       brand: item.productBrand,
       type: item.productType
    }
