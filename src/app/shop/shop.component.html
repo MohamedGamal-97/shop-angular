@@ -128,7 +128,7 @@
           <section class="widget widget-sizes mb-5">
             <h3 class="widget-title h4 mb-4">Shop by price</h3>
 
-            <npn-slider
+            <!-- <npn-slider
               [min]="1"
               [max]="9000"
               (onChange)="onSliderChange($event)"
@@ -137,7 +137,7 @@
               [maxSelected]="max_Range"
               [showStepIndicator]="true"
               [multiRange]="true"
-            ></npn-slider>
+            ></npn-slider> -->
             <div style="text-align: center">
               <input
                 type="number"
@@ -249,15 +249,11 @@
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-           
-=======
           </div>
         </div>
         <div class="mb-3 h4" *ngIf="shopParams.search">
           <span>Result of</span><strong> {{shopParams.search}}</strong> <a routerLink="/shop" class="h6 text-color ml-2" >clear:</a>
         </div>
->>>>>>> b2f550b24bc3b22c802d587521c50b07c0765c66
 
         <div class="row">
           <div

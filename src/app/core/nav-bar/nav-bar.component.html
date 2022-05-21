@@ -61,6 +61,10 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact-us" routerLinkActive="active">Contact Us</a>
         </li>
+        <ng-container *ngIf="(currentUser$ | async) === null">
+          <a routerLink="/account/login" class="btn btn-outline-secondary mr-2">Login</a>
+          <a routerLink="/account/register" class="btn btn-outline-secondary mr-3">Sign up</a>
+        </ng-container>
         <!-- Account -->
         <li class="nav-item dropdown dropdown-slide">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-delay="350"
@@ -115,7 +119,6 @@
             </div>
             <a href="#" class="remove"><i class="tf-ion-close"></i></a>
           </div>
-<<<<<<< HEAD
       </div>
       <ng-container *ngIf="(currentUser$ | async) === null">
       <a routerLink="/account/login" class="btn btn-outline-secondary mr-2">Login</a>
@@ -142,7 +145,6 @@
       </form>
   </div>
 </div>
-=======
 
           <div class="media">
             <a routerLink="/product-single">
@@ -167,10 +169,8 @@
               <a routerLink="/checkout" class="btn btn-small btn-main btn-block">Checkout</a>
             </div>
           </div>
-        </div>
-      </li> -->
+
       <li class="list-inline-item"><a href="/profile-details"><i class="tf-ion-ios-person mr-3"></i></a></li>
     </ul>
   </div>
 </nav>
->>>>>>> b2f550b24bc3b22c802d587521c50b07c0765c66

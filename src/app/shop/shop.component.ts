@@ -1,6 +1,6 @@
 import { isNull } from '@angular/compiler/src/output/output_ast';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, ElementRef, OnInit, ViewChild  } from '@angular/core';
+import { ActivatedRoute, Router} from '@angular/router';
 import { IBrand } from '../shared/models/brand';
 import { ICategory } from '../shared/models/category';
 import { IColor } from '../shared/models/coluor';
@@ -9,6 +9,7 @@ import { IType } from '../shared/models/productType';
 import { ShopParams } from '../shared/models/shopParams';
 import { ISize } from '../shared/models/size';
 import { ShopService } from './shop.service';
+
 
 
 @Component({
@@ -62,14 +63,9 @@ this.activatedRoute.paramMap.subscribe((params)=>{
   ngOnInit(): void {
     this.getProducts();
     this.getBrands();
-<<<<<<< HEAD
-    this.getTypes();
-    //this.AddProduct();
-=======
     this.getSizes();
     this.getColors();
     this.getCategories();
->>>>>>> b2f550b24bc3b22c802d587521c50b07c0765c66
   }
   getProducts() {
     // alert(this.shopParams.sale+" "+  this.shopParams.categoryId)
@@ -88,48 +84,6 @@ this.activatedRoute.paramMap.subscribe((params)=>{
       (err) => console.log(err)
     );
   }
-<<<<<<< HEAD
-
-  getBrands() {
-    this.shopService.getBrands().subscribe(response => {
-      this.brands = [{ id: 0, name: 'All' }, ...response];
-    }, error => {
-      console.log(error);
-    });
-  }
-
-  getTypes() {
-    this.shopService.getTypes().subscribe(response => {
-      this.types = [{ id: 0, name: 'All' }, ...response];
-    }, error => {
-      console.log(error);
-    });
-  }
-  AddProduct(){
-    this.shopService.PostProduct("samna", "samna", 11,"samna", 1,1)
-    }
-  
-
-  onBrandSelected(brandId: number) {
-    this.shopParams.brandId = brandId;
-    this.shopParams.pageNumber=1;
-    this.getProducts();
-  }
-
-  onTypeSelected(typeId: number) {
-    this.shopParams.typeId = typeId;
-    this.shopParams.pageNumber=1;
-
-    this.getProducts();
-  }
-
-  onSortSelected(sort: string) {
-    this.shopParams.sort = sort;
-    this.getProducts();
-  }
-
-=======
->>>>>>> b2f550b24bc3b22c802d587521c50b07c0765c66
   onPageChanged(event: any) {
     console.log(this.shopParams.sale+" page "+this.shopParams.categoryId);
     if (this.shopParams.pageNumber !== event) {
