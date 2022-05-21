@@ -5,6 +5,7 @@ import { IType } from '../shared/models/productType';
 import { ShopParams } from '../shared/models/ShopParams';
 import { ShopService } from './shop.service';
 
+
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
@@ -29,6 +30,7 @@ export class ShopComponent implements OnInit {
     this.getProducts();
     this.getBrands();
     this.getTypes();
+    //this.AddProduct();
   }
 
   getProducts() {
@@ -58,6 +60,10 @@ export class ShopComponent implements OnInit {
       console.log(error);
     });
   }
+  AddProduct(){
+    this.shopService.PostProduct("samna", "samna", 11,"samna", 1,1)
+    }
+  
 
   onBrandSelected(brandId: number) {
     this.shopParams.brandId = brandId;

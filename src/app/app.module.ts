@@ -7,12 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
 
   ],
   imports: [
@@ -22,6 +23,7 @@ import { HomeModule } from './home/home.module';
     HttpClientModule,
     CoreModule,
     HomeModule,
+       ReactiveFormsModule,
     
   ],
   providers: [],

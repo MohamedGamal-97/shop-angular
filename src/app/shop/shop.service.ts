@@ -55,4 +55,13 @@ export class ShopService {
   getProduct(id:number){
     return this.http.get<IProduct>(this.baseUrl+'products/'+id);
   }
+
+  PostProduct( Name :string,  Description:string ,  Price:number
+    ,  PictureUrl:string,  ProductTypeId:number,  ProductBrandId:number )
+    {
+      this.http.post<any>(this.baseUrl+'products/PostProduct', {Name, Description, Price, 
+      PictureUrl, ProductTypeId, ProductBrandId},).subscribe(data => {
+        console.log(data);
+    });
+    }
 }
