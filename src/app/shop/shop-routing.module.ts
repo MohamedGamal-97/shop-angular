@@ -6,7 +6,7 @@ import { LoginComponent } from '../account/login/login.component'
 
 const routes:Routes=[
   {path:'',component:ShopComponent},
-  {path:':id',component:ProductDetailsComponent},
+  {path:':id',component:ProductDetailsComponent,data: { breadcrumb:{alias: 'ProductDetails' }}},
 ];
 
 @NgModule({

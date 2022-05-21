@@ -1,31 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ShopComponent } from './shop.component';
-import { ProductItemComponent } from './product-item/product-item.component';
 import { SharedModule } from '../shared/shared.module';
+import { ShopRoutingModule } from './shop-routing.module.module';
+import { ProductItemComponent } from './product-item/product-item.component';
+import { ShopComponent } from './shop.component';
+import { RatingModule, RatingConfig } from 'ngx-bootstrap/rating';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
+import { NpnSliderModule } from "npn-slider";
 import { ProductDetailsComponent } from './product-details/product-details.component';
-import { ShopRoutingModule } from './shop-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
-
 @NgModule({
-  declarations: [
-    ShopComponent,
-    ProductItemComponent,
-    ProductDetailsComponent
-  ],
+  declarations: [ProductDetailsComponent,ProductItemComponent,ShopComponent],
   imports: [
     CommonModule,
     SharedModule,
     ShopRoutingModule,
-    ReactiveFormsModule,
+    NpnSliderModule,
+    RatingModule,
+    SlickCarouselModule,
     FormsModule
-
   ],
-  exports: [
-    
-  ]
+  providers:[RatingConfig]
+  ,
 
 })
 export class ShopModule { }

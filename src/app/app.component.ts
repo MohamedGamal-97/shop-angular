@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from './account/account.service';
+import { FavouriteService } from './favourite/favourite.service';
+import { BasketService } from './basket/basket.service';
 
 @Component({
   selector: 'app-root',
@@ -9,17 +11,34 @@ import { AccountService } from './account/account.service';
 export class AppComponent implements OnInit{
   title = 'YourStore';
 
-  constructor(private accountService: AccountService) {}
 
-  ngOnInit(): void {
-    //this.loadBasket();
-    this.loadCurrentUser();
     
+    
+  constructor(private favouriteService: FavouriteService,private baseketService:BasketService, private AccountService: AccountService){
   }
+  ngOnInit(): void {
+    this.loadCurrentUser();
+    const favouritetId = localStorage.getItem('favourite_Id');
+    if(favouritetId){
+      this.favouriteService.getFavourite(favouritetId).subscribe(() => {
+        console.log('initialised Favourite');
+      }, error => {
+        console.log(error);
+      })
+    const basketId = localStorage.getItem('basket_id');
+    if(basketId){
+      this.baseketService.getBasket(basketId).subscribe(()=>{
+        console.log('initialized basket');
+      },error=>{
+        console.log(error);
+      })
+    }
+  }
+}
 
   loadCurrentUser() {
     const token = localStorage.getItem('token');
-    this.accountService.loadCurrentUser(token).subscribe(() => {
+    this.AccountService.loadCurrentUser(token).subscribe(() => {
       console.log('loaded user');
     }, error => {
       console.log(error);
@@ -36,3 +55,4 @@ export class AppComponent implements OnInit{
   //   }
   // }
 }
+

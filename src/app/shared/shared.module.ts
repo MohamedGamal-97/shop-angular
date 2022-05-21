@@ -6,26 +6,41 @@ import { PagerComponent } from './components/pager/pager.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
-
+// import { CarouselModule } from 'ngx-owl-carousel-o';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RouterModule } from '@angular/router';
+import { MessageBoxComponent } from './components/message-box/message-box.component';
+import {CarouselModule} from 'ngx-bootstrap/carousel';
+import { OrderTotalsComponent } from './components/order-totals/order-totals.component';
 
 @NgModule({
   declarations: [
     PagingHeaderComponent,
-    PagerComponent
+    PagerComponent,
+    DashboardComponent,
+    MessageBoxComponent,
+    OrderTotalsComponent
   ],
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    // CarouselModule,
+    RouterModule,
+
+    CarouselModule.forRoot()
   ],
   exports:[
     PaginationModule,
     PagingHeaderComponent,
     PagerComponent,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
 
+    DashboardComponent,
+    // CarouselModule,
+    OrderTotalsComponent
   ]
 })
 export class SharedModule { }

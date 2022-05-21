@@ -1,12 +1,12 @@
 .category {
-    
+
     &__profile {
       border-radius: 50px;
       box-shadow: 0 5px 7px -1px rgb(51 51 51 / 23%);
       cursor: pointer;
       transition: transform 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98), box-shadow 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98);
       background-color: #C0D8C0;
-      margin: 5px;
+      margin: 5px auto;
       padding: 10px;
       width: 90%;
 
@@ -14,11 +14,15 @@
         transform: scale(1.1);
         // box-shadow: 0 9px 47px 11px rgba(51, 51, 51, 0.18);
       }
+
+      span {
+        display: block;
+        text-align: center;
+      }
     }
-  
   }
 
-  
+
 #filterbar {
   // width: 30%;
   background-color: #fff;
@@ -31,8 +35,8 @@
   display: block;
   position: relative;
   padding-left: 23px;
-  cursor: pointer;
   font-size: 0.9rem;
+  cursor: pointer ;
   margin: 0
 }
 
@@ -73,4 +77,36 @@
   background-color: #333;
   border-radius: 2px
 }
+<<<<<<< HEAD
 
+
+.searchBox {
+  background: #dde5df;
+  /* height: 40px; */
+  border-radius: 40px;
+  padding-left: 12px;
+}
+
+
+.searchButton {
+  color: #d4efd5;
+  background: #1f7433;
+  transition: 0.4s;
+}
+
+.searchInput {
+  
+border: none;
+background: none;
+outline: none;
+transition: 0.4s;
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+  width: 150px;
+  padding: 0 6px;
+}
+}
+=======
+>>>>>>> 27d6c4edf02260c445bbe961474a582ee66be382
