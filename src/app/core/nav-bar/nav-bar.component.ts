@@ -2,7 +2,6 @@ import { IUser } from '../../shared/models/user';
 import { AccountService } from '../../account/account.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-// import { BasketService } from 'src/app/basket/basket.service';
 import { IFavourite } from 'src/app/shared/models/Favourite';
 import { Observable } from 'rxjs';
 import { BasketService } from 'src/app/basket/basket.service';
