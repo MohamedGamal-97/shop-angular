@@ -24,6 +24,10 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact-us" routerLinkActive="active">Contact Us</a>
         </li>
+        <ng-container *ngIf="(currentUser$ | async) === null">
+          <a routerLink="/account/login" class="btn btn-outline-secondary mr-2">Login</a>
+          <a routerLink="/account/register" class="btn btn-outline-secondary mr-3">Sign up</a>
+        </ng-container>
         <!-- Account -->
         <li class="nav-item dropdown dropdown-slide">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-delay="350"

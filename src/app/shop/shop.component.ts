@@ -1,6 +1,6 @@
 import { isNull } from '@angular/compiler/src/output/output_ast';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, ElementRef, OnInit, ViewChild  } from '@angular/core';
+import { ActivatedRoute, Router} from '@angular/router';
 import { IBrand } from '../shared/models/brand';
 import { ICategory } from '../shared/models/category';
 import { IColor } from '../shared/models/coluor';
@@ -9,6 +9,8 @@ import { IType } from '../shared/models/productType';
 import { ShopParams } from '../shared/models/shopParams';
 import { ISize } from '../shared/models/size';
 import { ShopService } from './shop.service';
+
+
 
 @Component({
   selector: 'app-shop',

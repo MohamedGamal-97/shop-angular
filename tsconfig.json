@@ -20,4 +20,6 @@
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false
   }
+  ,"experimentalDecorators" : true,
+  "javascript.implicitProjectConfig.experimentalDecorators": true
 }

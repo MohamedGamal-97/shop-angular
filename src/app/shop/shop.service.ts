@@ -75,4 +75,13 @@ export class ShopService {
   getCategories() {
     return this.http.get<ICategory[]>(this.baseUrl + 'products/Categories');
   }
+
+  PostProduct( Name :string,  Description:string ,  Price:number
+    ,  PictureUrl:string,  ProductTypeId:number,  ProductBrandId:number )
+    {
+      this.http.post<any>(this.baseUrl+'products/PostProduct', {Name, Description, Price, 
+      PictureUrl, ProductTypeId, ProductBrandId},).subscribe(data => {
+        console.log(data);
+    });
+    }
 }

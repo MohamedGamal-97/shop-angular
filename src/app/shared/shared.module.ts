@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { PagingHeaderComponent } from './components/paging-header/paging-header.component';
 import { PagerComponent } from './components/pager/pager.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 // import { CarouselModule } from 'ngx-owl-carousel-o';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -23,6 +25,8 @@ import { TextInputComponent } from './components/text-input/text-input.component
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
+    ReactiveFormsModule,
+    FormsModule,
     // CarouselModule,
     RouterModule,
     ReactiveFormsModule,
@@ -33,6 +37,9 @@ import { TextInputComponent } from './components/text-input/text-input.component
     PaginationModule,
     PagingHeaderComponent,
     PagerComponent,
+    ReactiveFormsModule,
+    FormsModule,
+
     DashboardComponent,
     // CarouselModule,
     OrderTotalsComponent,
