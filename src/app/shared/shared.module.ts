@@ -11,13 +11,12 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import {CarouselModule} from 'ngx-bootstrap/carousel';
 import { OrderTotalsComponent } from './components/order-totals/order-totals.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { TextInputComponent } from './components/text-input/text-input.component';
 
 @NgModule({
   declarations: [
     PagingHeaderComponent,
-    PagerComponent,
+  PagerComponent,
     DashboardComponent,
     OrderTotalsComponent,
     TextInputComponent

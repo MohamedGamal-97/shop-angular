@@ -24,15 +24,15 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact-us" routerLinkActive="active">Contact Us</a>
         </li>
-        <ng-container *ngIf="(currentUser$ | async) === null">
+        <!-- <ng-container *ngIf="(currentUser$ | async) === null">
           <a routerLink="/account/login" class="btn btn-outline-secondary mr-2">Login</a>
           <a routerLink="/account/register" class="btn btn-outline-secondary mr-3">Sign up</a>
-        </ng-container>
+        </ng-container> -->
         <!-- Account -->
         <li class="nav-item dropdown dropdown-slide">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-delay="350"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Account.
+            {{(currentUser$ | async) === null?'Account':'Hi,'+(currentUser$ | async).userName}}.
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
             <ng-container *ngIf="(currentUser$ | async) === null">

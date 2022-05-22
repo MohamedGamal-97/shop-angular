@@ -2,7 +2,6 @@
       <div class="col-12 col-md-7 col-sm-12 col-lg-9 mr-5">
 
         <div *ngIf="(currentUser$|async)" class="tab-pane fade show active" id="settings" role="tabpanel"  >
-          {{(currentUser$|async).displayName}}
           <div class="acccount-settings">
             <h4 class="mb-4">Account information</h4>
             <form [formGroup]="updateUserForm" (ngSubmit)="updateUser()" action="#">
