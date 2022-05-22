@@ -5,6 +5,8 @@ import { IFavourite } from 'src/app/shared/models/Favourite';
 import { Observable } from 'rxjs';
 import { BasketService } from 'src/app/basket/basket.service';
 import { IBasket } from 'src/app/shared/models/basket';
+import { IUser } from 'src/app/shared/models/user';
+import { AccountService } from 'src/app/account/account.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -15,11 +17,17 @@ export class NavBarComponent implements OnInit {
   // basket$?: Observable<IBasket|null>
   @ViewChild('search', {static: true}) searchTerm!: ElementRef;
   basket$:Observable<IBasket>;
-
-  constructor(private router:Router,private basketService:BasketService) { }
+  currentUser$: Observable<IUser>;
+  constructor(private router:Router,private basketService:BasketService, private accountService: AccountService) { }
 
   ngOnInit(): void {
     this.basket$ = this.basketService.basket$;
+    this.currentUser$ = this.accountService.currentUser$;
+  }
+
+
+  logout() {
+    this.accountService.logout();
   }
   onProductSearch(event:any){
     if(event.keyCode ==13)

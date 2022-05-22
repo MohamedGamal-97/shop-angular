@@ -1,16 +1,22 @@
 <div class="col-12 col-md-7 col-sm-12 col-lg-9">
-  <p>The following addresses will be used on the checkout page by default.</p>
+  <p *ngIf="address">The following addresses will be used on the checkout page by default.</p>
 
   <div class="account-info">
-    <div class="card p-4">
-      <h4 class="card-title">Billing info <a routerLink="/edit-address" class="float-right text-sm">Edit</a></h4>
-      <address>Jassa Smith<br>
-        1491 Ludhiana Street<br>
-        Punjab<br>
-        India<br>
+    <div *ngIf="address" class="card p-4">
+      <h4  class="card-title">Billing info <a routerLink="/edit-address" class="float-right text-sm">Edit</a></h4>
+      <address>
+        FirstName:&nbsp;<strong>{{address.firstName}}</strong><br>
+        LastName:&nbsp;<strong>{{address.lastName}}</strong><br>
+        City:&nbsp;<strong>{{address.city}}</strong><br>
+        State:&nbsp;<strong>{{address.state}}</strong><br>
+        Street:&nbsp;<strong>{{address.street}}</strong><br>
+        Zipcode:&nbsp;<strong>{{address.zipCode}}</strong><br>
       </address>
     </div>
-
+    <div *ngIf="!address">
+      <p>You didnot Add Address yet </p>
+      <a routerLink="/edit-address" class="btn btn-dark" >Add <Address></Address></a>
+    </div>
     <!-- <div class="card p-4 mt-4">
       <h4 class="card-title">Shipping info <a routerLink="/edit-address" class="float-right text-sm">Edit</a></h4>
       You have not set up this type of address yet.

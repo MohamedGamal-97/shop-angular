@@ -7,23 +7,25 @@ import { PagerComponent } from './components/pager/pager.component';
 // import { CarouselModule } from 'ngx-owl-carousel-o';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
-import { MessageBoxComponent } from './components/message-box/message-box.component';
 import {CarouselModule} from 'ngx-bootstrap/carousel';
 import { OrderTotalsComponent } from './components/order-totals/order-totals.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TextInputComponent } from './components/text-input/text-input.component';
 
 @NgModule({
   declarations: [
     PagingHeaderComponent,
     PagerComponent,
     DashboardComponent,
-    MessageBoxComponent,
-    OrderTotalsComponent
+    OrderTotalsComponent,
+    TextInputComponent
   ],
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
     // CarouselModule,
     RouterModule,
+    ReactiveFormsModule,
 
     CarouselModule.forRoot()
   ],
@@ -33,7 +35,10 @@ import { OrderTotalsComponent } from './components/order-totals/order-totals.com
     PagerComponent,
     DashboardComponent,
     // CarouselModule,
-    OrderTotalsComponent
+    OrderTotalsComponent,
+    ReactiveFormsModule,
+    TextInputComponent,
+
   ]
 })
 export class SharedModule { }

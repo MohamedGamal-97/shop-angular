@@ -31,14 +31,14 @@
   </div>
   <span class="onsale" *ngIf="product.sale>0">Sale</span>
   <div class="product-hover-overlay">
-    <a href="#"><i class="tf-ion-android-cart"></i></a>
+    <a (click)="addItemToBasket()"><i class="tf-ion-android-cart"></i></a>
     <a href="#simpleModal" (click)="addItemToFavourite()" data-toggle="modal"  data-backdrop="static"  data-keyboard="false"><i class="tf-ion-ios-heart"></i></a>
 <!-- data-toggle="modal" data-target="#simpleModal" data-backdrop="static" data-keyboard="false" -->
   </div>
 
   <div class="product-info">
     <h2 class="product-title h5 mb-0">
-      <a routerLink="/product-single">{{product.name}}</a>
+    <a routerLink="/profile-details">{{product.name}}</a>
     </h2>
     <rating
     class="rating-big"

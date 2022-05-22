@@ -3,7 +3,7 @@
 <section class="user-dashboard page-wrapper">
   <div class="container">
     <div class="row d-flex ">
-      <div class="col-12 col-md-5 col-sm-12 col-lg-3 mr-10" style="margin-right: 100px;">
+      <div class="col-12 col-md-5 col-sm-12 col-lg-3 mr-10 mb-4" style="margin-right: 100px;">
 
         <div class="nav flex-column nav-pills">
           <a class="nav-link" routerLink="/Orders" routerLinkActive="active">Orders</a>
@@ -19,7 +19,7 @@
           <a class="nav-link" routerLink="/favourite" routerLinkActive="active">Favourite items</a>
         </div>
         <div class="nav flex-column nav-pills">
-          <a class="nav-link" routerLink="/" >Log Out</a>
+          <a class="nav-link" (click)="logout()" >Log Out</a>
         </div>
       </div>
 

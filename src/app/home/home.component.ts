@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { BasketService } from '../basket/basket.service';
 import { FavouriteService } from '../favourite/favourite.service';
 import { IProduct } from '../shared/models/product';
 import { ShopParams } from '../shared/models/shopParams';
@@ -22,7 +23,8 @@ export class HomeComponent implements OnInit {
   BestWatches:{array:IProduct[]};
   BestProducts:{array:IProduct[]};
   BestTvs:{array:IProduct[]};
-  constructor(private homeService:HomeService,private router:Router,private favouriteService:FavouriteService) {
+  constructor(private homeService:HomeService,private router:Router
+    ,private favouriteService:FavouriteService,private basketService:BasketService) {
     this.shopParams=new ShopParams();
     this.newArrivals={array:[]};
     this.BestSellers={array:[]};
@@ -79,6 +81,9 @@ export class HomeComponent implements OnInit {
   }
   addItemToFavourite(product:IProduct) {
     this.favouriteService.addItemToFavourite(product);
+  }
+  addItemToBasket(product:IProduct) {
+    this.basketService.addItemToBasket(product);
   }
   slideConfig = {"slidesToShow": 1, "slidesToScroll": 1} ;
   slideConfig2 = {"slidesToShow": 6, "slidesToScroll": 6,"infinite": false,'dots': true,  'autoplay': true,  'adaptiveHeight': true,'draggable':true,    autoplaySpeed: 4000,} ;
