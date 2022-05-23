@@ -17,6 +17,7 @@ export class OrderTotalsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

@@ -10,23 +10,21 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import {CarouselModule} from 'ngx-bootstrap/carousel';
 import { OrderTotalsComponent } from './components/order-totals/order-totals.component';
-import{CdkStepperModule} from '@angular/cdk/stepper';
-import { StepperComponent } from './components/stepper/stepper.component';
-
-import { BasketSummaryComponent } from './components/basket-summary/basket-summary.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TextInputComponent } from './components/text-input/text-input.component';
+import { CdkStepperModule } from '@angular/cdk/stepper';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StepperComponent } from './components/stepper/stepper.component';
+import { BasketSummaryComponent } from './components/basket-summary/basket-summary.component';
 
 @NgModule({
   declarations: [
     PagingHeaderComponent,
-    PagerComponent,
-    OrderTotalsComponent,
-    StepperComponent,
-    BasketSummaryComponent,
+  PagerComponent,
     DashboardComponent,
     OrderTotalsComponent,
-    TextInputComponent
+    TextInputComponent,
+    StepperComponent,
+    BasketSummaryComponent
   ],
   imports: [
     CommonModule,
@@ -36,11 +34,9 @@ import { TextInputComponent } from './components/text-input/text-input.component
     ReactiveFormsModule,
     RouterModule,
     FormsModule,
+    
     // CarouselModule,
-    RouterModule,
-    ReactiveFormsModule,
 
-    CarouselModule.forRoot()
   ],
   exports:[
     PaginationModule,
@@ -59,7 +55,6 @@ import { TextInputComponent } from './components/text-input/text-input.component
     DashboardComponent,
     // CarouselModule,
     OrderTotalsComponent,
-    ReactiveFormsModule,
     TextInputComponent,
 
   ]

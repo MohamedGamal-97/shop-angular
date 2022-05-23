@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AccountService } from './account/account.service';
 import { FavouriteService } from './favourite/favourite.service';
 import { BasketService } from './basket/basket.service';
+// import { AccountService } from './account/account.service';
 
 @Component({
   selector: 'app-root',

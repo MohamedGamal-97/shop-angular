@@ -24,7 +24,7 @@ export class ProfileDetailsComponent implements OnInit {
   async getUser(){
   await this.currentUser$.subscribe(user=>{
     this.user=user;
-    alert(this.user);
+    // alert(this.user);
     this.createUpdateForm();
         })
 }
@@ -62,7 +62,7 @@ export class ProfileDetailsComponent implements OnInit {
     alert("done")
     this.accountService.UpdateCurrentUser(token,this.updateUserForm.value).subscribe(
       (user:any)=>{
-        alert("done"+ user)
+        // alert("done"+ user)
         this.accountService.logout();
       //  this.router.navigate(['address']);
       }
