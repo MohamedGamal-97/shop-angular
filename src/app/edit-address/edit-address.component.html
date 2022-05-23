@@ -1,0 +1,45 @@
+<div class="col-12 col-md-7 col-sm-12 col-lg-9">
+  <div  class="acccount-settings" >
+    <h4 class="mb-4">Edit Address</h4>
+    <!-- {{addressForm.value.city}} -->
+    <form [formGroup]="addressForm " (ngSubmit)="updateAddress()" >
+      <div class="form-row">
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label>FirstName</label>
+            <input formControlName="firstName" type="text" class="form-control" value="{{address.firstName}}">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label>LastName</label>
+            <input formControlName="lastName" type="text" class="form-control" value="{{address.lastName}}">
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label>City</label>
+            <input formControlName="city" type="text" class="form-control" value="{{address.city}}">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label>State</label>
+            <input formControlName="state" type="text" class="form-control" value="{{address.state}}">
+          </div>
+        </div>
+      </div>
+      <div class="form-group mb-4">
+        <label>Street</label>
+        <input formControlName="street" type="text" class="form-control" value="{{address.street}}">
+      </div>
+      <div class="form-group mb-4">
+        <label>ZipCode</label>
+        <input formControlName="zipCode" type="text" class="form-control" value="{{address.zipCode}}">
+      </div>
+      <button class="btn btn-dark" type="submit">{{address==null?'Add Address': 'Save Changes'}}</button>
+    </form>
+  </div>
+</div>
