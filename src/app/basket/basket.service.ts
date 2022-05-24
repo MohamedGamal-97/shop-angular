@@ -82,6 +82,9 @@ basketTotal$ = this.basketTotalSource.asObservable();
     const subtotal = basket.items.reduce((a,b)=>(b.price*b.quantity)+a,0);
     const total = subtotal+shipping;
     this.basketTotalSource.next({shipping,total,subtotal});
+
+
+    
   }
 
   incrementItemQuantity(item: IBasketItem) {
