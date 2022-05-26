@@ -21,6 +21,9 @@ export interface IBasket {
   }
 
   export class Basket implements IBasket {
+      ClientSecret: string;
+      paymentIntentId: string;
+      deliveryMethodId: number;
       id= uuidv4();
       items: IBasketItem[]=[];
   }

@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-center mt-5">
+    <div class="col-3">
+        <form [formGroup]="AddProductForm" (ngSubmit)="onSubmit()">
+            <div class="text-center mb-4">
+                <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+            </div>
+
+            <app-text-input formControlName="Name" [label]="'Name'"></app-text-input>
+            <app-text-input formControlName="Description" [label]="'Description'"></app-text-input>
+            <app-text-input formControlName="Price" [label]="'Price'"></app-text-input>
+            <app-text-input formControlName="productImages" [label]="'productImages'" aria-placeholder="Enter Images URLs seperated by a comma, make sure the url itself has no comma"></app-text-input>
+            <app-text-input formControlName="quantity" [label]="'quantity'"></app-text-input>
+            <app-text-input formControlName="productBrandId" [label]="'productBrandId'"></app-text-input>
+            <app-text-input formControlName="subCategory_Id" [label]="'subCategory_Id'"></app-text-input>
+            <app-text-input formControlName="category_Id" [label]="'category_Id'"></app-text-input>
+            <app-text-input formControlName="color_Id" [label]="'color_Id'"></app-text-input>
+            <app-text-input formControlName="size_Id" [label]="'size_Id'"></app-text-input>
+            <app-text-input formControlName="productFeatures" [label]="'productFeatures'" aria-placeholder="Enter feautures  seperated by a comma, make sure the feauture string itself has no comma"></app-text-input>
+           
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+    </div>
+</div>

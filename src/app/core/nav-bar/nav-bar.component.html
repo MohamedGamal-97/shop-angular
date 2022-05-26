@@ -24,6 +24,12 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact-us" routerLinkActive="active">Contact Us</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admins/add" routerLinkActive="active">admin</a>
+        </li>
+
+        
+        
         <!-- <ng-container *ngIf="(currentUser$ | async) === null">
           <a routerLink="/account/login" class="btn btn-outline-secondary mr-2">Login</a>
           <a routerLink="/account/register" class="btn btn-outline-secondary mr-3">Sign up</a>
@@ -42,8 +48,12 @@
             </ng-container>
             <li><a routerLink="/profile-details" >My Account</a></li>
             <li><a routerLink="/order">Orders</a></li>
+            <li class="nav-item" *ngIf="(currentUser$ | async).role=='admin'">
+              <a class="nav-link" routerLink="/shop" routerLinkActive="active">admin</a>
+            </li>
             <li><a routerLink="/address">Address</a></li>
             <li><a routerLink="/favourite">Saved Items</a></li>
+           
             <li *ngIf="(currentUser$ | async)">
               <hr>
               <a (click)="logout()" >
@@ -91,5 +101,6 @@
 
       <li class="list-inline-item"><a routerLink="/profile-details"><i class="tf-ion-ios-person mr-3"></i></a></li>
     </ul>
+    
   </div>
 </nav>

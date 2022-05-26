@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, of, ReplaySubject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../environments/environment';
 import { IAddress } from '../shared/models/address';
 import { IUser } from '../shared/models/user';
 
@@ -26,7 +26,7 @@ export class AccountService {
     let headers = new HttpHeaders();
     headers = headers.set('Authorization', `Bearer ${token}`);
 
-    return this.http.get(this.baseUrl + 'account', {headers}).pipe(
+    return this.http.get<IUser>(this.baseUrl + 'account', {headers}).pipe(
       map((user: IUser) => {
         if (user) {
           localStorage.setItem('token', user.token);
@@ -42,7 +42,7 @@ export class AccountService {
     let headers = new HttpHeaders();
     headers = headers.set('Authorization', `Bearer ${token}`);
     // alert(token);
-    return this.http.put(this.baseUrl + 'account',userDto, {headers}).pipe(
+    return this.http.put<IUser>(this.baseUrl + 'account',userDto, {headers}).pipe(
       map((user: IUser) => {
         if (user) {
           // localStorage.setItem('token', user.token);
@@ -52,7 +52,7 @@ export class AccountService {
     )
   }
   login(values: any) {
-    return this.http.post(this.baseUrl + 'account/login', values).pipe(
+    return this.http.post<IUser>(this.baseUrl + 'account/login', values).pipe(
       map((user: IUser) => {
         if (user) {
           localStorage.setItem('token', user.token);
@@ -63,7 +63,7 @@ export class AccountService {
   }
 
   register(values: any) {
-    return this.http.post(this.baseUrl + 'account/register', values).pipe(
+    return this.http.post<IUser>(this.baseUrl + 'account/register', values).pipe(
       map((user: IUser) => {
         if (user) {
           localStorage.setItem('token', user.token);
